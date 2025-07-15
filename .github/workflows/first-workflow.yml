@@ -10,6 +10,9 @@ jobs:
             - name: Welcome message
               run: echo "My first Github Workflow Action."
 
+            - name: Checkout
+              uses: actions/checkout@v4.2.2
+
             - name: List files
               run: ls
 
