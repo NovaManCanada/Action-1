@@ -7,15 +7,14 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Welcome message
-              run: echo "My first Github Workflow Action."
-
             - name: Checkout
               uses: actions/checkout@v4.2.2
 
-            - name: List files
-              run: ls
+            - name: List and read files
+              run: |
+                echo "My first Github Workflow Action."
+                ls -ltra
+                cat README.md
 
-            - name: Read file
-              run: cat README.md
-
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a Dragon...RWAR" >> dragon.txt
